@@ -9,8 +9,8 @@ const char pass[] = "<Wifi Password>";
 // Connetion parameters from the provisioning json file
 const char hubNamespace[] = "<the namespace we created>";
 const char deviceId[] = "<deviceId>";
-const char tenantId[] = "<iot hub tenant>";
-const char mqttPassword[] = "<Wifi Password>";
+const char tenantId[] = "<IoT Hub tenant>";
+const char mqttPassword[] = "<MQTT Password>";
 
 // Since Bosch IoT Hub needs TLS, we need to use the WifiClient Secure instead of the normal Wifi Client
 WiFiClientSecure net;
