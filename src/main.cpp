@@ -87,7 +87,7 @@ void loop() {
   if (millis() - lastMillis > 1000) {
     lastMillis = millis();
     char payload[1000];
-    sprintf(payload, "{\r\n\t\"topic\": \"de.cgrotz.blog.dmp/test/things/twin/commands/modify\",\r\n\t\"path\": \"/features/version\",\r\n\t\"value\": {\r\n\t \t\"properties\": {\r\n \t\t \t\"version\": \"1.0.8\"\r\n\t\t}\r\n\t}\r\n}",hubNamespace, deviceId );
+    sprintf(payload, "{\r\n\t\"topic\": \"%s/%s/things/twin/commands/modify\",\r\n\t\"path\": \"/features/version\",\r\n\t\"value\": {\r\n\t \t\"properties\": {\r\n \t\t \t\"version\": \"1.0.8\"\r\n\t\t}\r\n\t}\r\n}",hubNamespace, deviceId );
     if(!client.publish("event", payload, false, 1)) {
       Serial.print("Failed publishing ");
       Serial.println(client.lastError());
